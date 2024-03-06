@@ -30,13 +30,9 @@ public class FileRepository {
     public boolean add(Question question) throws IOException {
         Path path = Paths.get(QUESTION_DATABASE_NAME);
 
-        List<Question> questions = findAll();
-        questions.add(question);
-
-        for(Question q : questions) {
-            String data = q.toLine();
-            appendToFile(path, data + NEW_LINE);
-        }
+        // Append the new question to the file
+        String newData = question.toLine() + NEW_LINE;
+        appendToFile(path, newData);
 
         return true;
     }
