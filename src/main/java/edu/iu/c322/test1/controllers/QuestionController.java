@@ -21,7 +21,7 @@ public class QuestionController {
         this.fileRepository = fileRepository;
     }
 
-    @PostMapping
+    @PostMapping("/add")
     public boolean add(@RequestBody Question question) {
         try {
             return fileRepository.add(question);
