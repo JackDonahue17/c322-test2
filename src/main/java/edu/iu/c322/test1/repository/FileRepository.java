@@ -29,8 +29,7 @@ public class FileRepository {
 
     public boolean add(Question question) throws IOException {
         Path path = Paths.get(QUESTION_DATABASE_NAME);
-
-        // Append the new question to the file
+        
         String newData = question.toLine() + NEW_LINE;
         appendToFile(path, newData);
 
