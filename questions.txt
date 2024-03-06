@@ -1,0 +1,2 @@
+1,What is this image?,Elephant,Elephant,Lion,Cheetah
+2,What is this image?,Lion,Lion,Cheetah,Elephant
